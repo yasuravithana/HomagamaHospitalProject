@@ -1,0 +1,97 @@
+﻿<Window x:Class="BaseHospitalHomagama.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="648" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit" Loaded="Window_Loaded">
+    <Grid Background="#FFE1C4C4">
+        <Grid Height="537" HorizontalAlignment="Left" Name="grid3" VerticalAlignment="Top" Width="993" Margin="0,46,0,0" Background="#FFE9EFCB" Visibility="Hidden" Panel.ZIndex="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="128*" />
+                <RowDefinition Height="409*" />
+            </Grid.RowDefinitions>
+            <DataGrid ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Top" MaxHeight="110" SelectionChanged="DataGrid_SelectionChanged" Margin="0,11,15,0" Height="Auto" SelectionMode="Single" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></DataGrid>
+            <ScrollViewer Height="234" HorizontalAlignment="Stretch" Margin="0,176,0,0" Name="scrollViewer6" VerticalAlignment="Top" Width="Auto" Grid.Row="1">
+                <TextBox AcceptsReturn="True" Height="Auto" HorizontalAlignment="Left" MinHeight="232" Name="textPreview" TextWrapping="Wrap" VerticalAlignment="Top" Width="979" />
+            </ScrollViewer>
+        </Grid>
+        <ScrollViewer Height="537" HorizontalAlignment="Left" Margin="0,46,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="993">
+            <Grid Height="Auto" Name="grid1" Width="977" Background="#FFE7DBDB">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="161,11,0,0" Name="textReportNo" VerticalAlignment="Top" Width="151" />
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="442,11,0,0" Name="textWardNo" VerticalAlignment="Top" Width="151" />
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="715,11,0,0" Name="textBhtNo" VerticalAlignment="Top" Width="151" />
+                <Label Content="Reference No :" Height="28" HorizontalAlignment="Left" Margin="69,9,0,0" Name="label2" VerticalAlignment="Top" />
+                <Label Content="Ward No :" Height="28" HorizontalAlignment="Left" Margin="381,11,0,0" Name="label3" VerticalAlignment="Top" />
+                <Label Content="BHT No :" Height="28" HorizontalAlignment="Left" Margin="656,11,0,0" Name="label4" VerticalAlignment="Top" />
+                <Label Content="Patient Name :" Height="28" HorizontalAlignment="Left" Margin="69,45,0,0" Name="label5" VerticalAlignment="Top" />
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="234,47,0,0" Name="textPatientName" VerticalAlignment="Top" Width="632" />
+                <ComboBox Height="26" HorizontalAlignment="Left" Margin="159,47,0,0" Name="comboBoxTitle" VerticalAlignment="Top" Width="68" SelectionChanged="comboBoxTitle_SelectionChanged">
+                    <ComboBoxItem Content="Mr." />
+                    <ComboBoxItem Content="Mrs." />
+                    <ComboBoxItem Content="Ms." />
+                    <ComboBoxItem Content="Rev." />
+                    <ComboBoxItem Content="Master" />
+                    <ComboBoxItem Content="Miss" />
+                    <ComboBoxItem Content="Baby" />
+                    <ComboBoxItem Content="Other..." />
+                </ComboBox>
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="161,81,0,0" Name="textAge" VerticalAlignment="Top" Width="49" />
+                <Label Content="Age :" Height="28" HorizontalAlignment="Left" Margin="119,79,0,0" Name="label6" VerticalAlignment="Top" />
+                <Label Content="years" Height="28" HorizontalAlignment="Left" Margin="214,79,0,0" Name="labelYrs" VerticalAlignment="Top" />
+                <Label Content="Gender :" Height="28" HorizontalAlignment="Left" Margin="374,79,0,0" Name="label8" VerticalAlignment="Top" />
+                <ComboBox Height="26" HorizontalAlignment="Left" Margin="429,81,0,0" Name="comboBoxGender" VerticalAlignment="Top" Width="68">
+                    <ComboBoxItem Content="Male" />
+                    <ComboBoxItem Content="Female" />
+                </ComboBox>
+                <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="161,146,0,0" Name="buttonAddSpecimen" VerticalAlignment="Top" Width="75" Click="buttonAddSpecimen_Click" />
+                <Button Content="Remove" Height="23" HorizontalAlignment="Left" Margin="518,116,0,0" Name="buttonRemoveSpecimen" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="buttonRemoveSpecimen_Click" />
+                <Grid HorizontalAlignment="Left" Margin="0,172,0,2" Name="grid2" Width="978" Background="#FFE7DBDB">
+                    <ScrollViewer Height="62" HorizontalAlignment="Left" Margin="161,6,0,0" Name="scrollViewer2" VerticalAlignment="Top" Width="705" Panel.ZIndex="1">
+                        <TextBox Height="Auto" Name="textClinicalDetails" Width="689" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="63" AcceptsReturn="True" TextWrapping="Wrap" />
+                    </ScrollViewer>
+                    <ScrollViewer Height="62" HorizontalAlignment="Left" Margin="161,74,0,0" Name="scrollViewer3" VerticalAlignment="Top" Width="705">
+                        <TextBox AcceptsReturn="True" Height="Auto" HorizontalAlignment="Left" MinHeight="63" Name="textMacroscopy" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" />
+                    </ScrollViewer>
+                    <ScrollViewer Height="62" HorizontalAlignment="Left" Margin="161,142,0,0" Name="scrollViewer4" VerticalAlignment="Top" Width="705">
+                        <TextBox AcceptsReturn="True" Height="Auto" HorizontalAlignment="Left" MinHeight="63" Name="textMicroscopy" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" />
+                    </ScrollViewer>
+                    <Label Content="Clinical Details :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="51,1,0,0" Name="label10" VerticalAlignment="Top" Width="105" />
+                    <Label Content="Macroscopy :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="51,69,0,0" Name="label11" VerticalAlignment="Top" Width="105" />
+                    <Label Content="Microscopy :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="51,139,0,0" Name="label12" VerticalAlignment="Top" Width="105" />
+                    <Label Content="Conclusion :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="51,205,0,0" Name="label13" VerticalAlignment="Top" Width="105" />
+                    <ScrollViewer Height="62" HorizontalAlignment="Left" Margin="161,210,0,0" Name="scrollViewer5" VerticalAlignment="Top" Width="705">
+                        <TextBox AcceptsReturn="True" Height="Auto" HorizontalAlignment="Left" MinHeight="63" Name="textConclusion" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" />
+                    </ScrollViewer>
+                    <Label Content="Severity :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="51,280,0,0" Name="label14" VerticalAlignment="Top" Width="105" IsEnabled="True" />
+                    <ComboBox Height="26" HorizontalAlignment="Left" Margin="161,280,0,0" Name="comboBoxSeverity" VerticalAlignment="Top" Width="207">
+                        <ComboBoxItem Content="No significance" />
+                        <ComboBoxItem Content="Cancer." />
+                    </ComboBox>
+                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="161,315,0,0" Name="datePicker1" VerticalAlignment="Top" Width="207" SelectedDateFormat="Long" />
+                    <DatePicker Height="25" HorizontalAlignment="Left" Margin="659,315,0,0" Name="datePicker2" VerticalAlignment="Top" Width="207" SelectedDateFormat="Long" />
+                    <Label Content="Request Date :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="True" Margin="69,312,0,0" Name="label15" VerticalAlignment="Top" Width="87" />
+                    <Label Content="Tested on :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="True" Margin="582,312,0,0" Name="label16" VerticalAlignment="Top" Width="71" />
+                </Grid>
+                <StackPanel Height="Auto" HorizontalAlignment="Left" Margin="161,114,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="337">
+                    <my:AutoCompleteBox Name="textSpecimen" Width="337" Height="26" />
+                </StackPanel>
+                <StackPanel Height="Auto" HorizontalAlignment="Left" Margin="51,114,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="105">
+                    <Label Content="Specimen :" Height="26" Name="label7" Width="105" HorizontalContentAlignment="Right" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+        <Label Content="HISTOPATHOLOGY REPORT" Height="35" HorizontalAlignment="Stretch" Margin="0,13,0,0" Name="label1" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Center" FontSize="20" FontStyle="Normal" FontWeight="Bold" VerticalContentAlignment="Center" Background="#FFE1C4C4" />
+        <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="161,590,0,0" Name="buttonSave" VerticalAlignment="Top" Width="75" Click="buttonSave_Click" />
+        <Button Content="Print" Height="23" HorizontalAlignment="Left" Margin="281,590,0,0" Name="buttonPrint" VerticalAlignment="Top" Width="75" Click="buttonPrint_Click" />
+        <Button Content="Clear" Height="23" HorizontalAlignment="Left" Margin="401,590,0,0" Name="buttonClear" VerticalAlignment="Top" Width="75" Click="buttonClear_Click" />
+        <Menu IsMainMenu="True" Margin="0,0,0,602" FontSize="8">
+            <MenuItem Header="Menu" FontSize="12" Padding="2,0,0,1" VerticalAlignment="Top">
+                <MenuItem Header="Get Previous Reports" Click="getPreviousReports_Click"/>
+                <MenuItem Header="Exit" Click="exitMenuItem_Click" />
+            </MenuItem>
+        </Menu>
+        <Label Height="28" HorizontalAlignment="Left" Margin="590,586,0,0" Name="labelError" VerticalAlignment="Top" Width="388" Visibility="Hidden" FontSize="14" Foreground="Red" VerticalContentAlignment="Center" />
+    </Grid>
+    
+</Window>
