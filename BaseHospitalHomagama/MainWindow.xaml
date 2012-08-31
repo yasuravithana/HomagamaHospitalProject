@@ -3,17 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="648" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit" Loaded="Window_Loaded">
     <Grid Background="#FFE1C4C4">
-        <Grid Height="537" HorizontalAlignment="Left" Name="grid3" VerticalAlignment="Top" Width="993" Margin="0,46,0,0" Background="#FFE9EFCB" Visibility="Hidden" Panel.ZIndex="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="969*" />
+            <ColumnDefinition Width="9*" />
+        </Grid.ColumnDefinitions>
+        <Grid Height="537" HorizontalAlignment="Left" Name="grid3" VerticalAlignment="Top" Width="993" Margin="0,46,0,0" Background="#FFE9EFCB" Visibility="Hidden" Panel.ZIndex="1" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="128*" />
                 <RowDefinition Height="409*" />
             </Grid.RowDefinitions>
-            <DataGrid ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Top" MaxHeight="110" SelectionChanged="DataGrid_SelectionChanged" Margin="0,11,15,0" Height="Auto" SelectionMode="Single" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></DataGrid>
-            <ScrollViewer Height="234" HorizontalAlignment="Stretch" Margin="0,176,0,0" Name="scrollViewer6" VerticalAlignment="Top" Width="Auto" Grid.Row="1">
-                <TextBox AcceptsReturn="True" Height="Auto" HorizontalAlignment="Left" MinHeight="232" Name="textPreview" TextWrapping="Wrap" VerticalAlignment="Top" Width="979" />
+            <ScrollViewer Height="540" HorizontalAlignment="Stretch" Margin="489,-2,0,0" Name="scrollViewer6" VerticalAlignment="Top" Grid.RowSpan="2">
+                <TextBox AcceptsReturn="True" Height="Auto" HorizontalAlignment="Stretch" MinHeight="232" Name="textPreview" TextWrapping="Wrap" VerticalAlignment="Stretch" Width="Auto" />
             </ScrollViewer>
+            <Grid Grid.RowSpan="2" Height="537" HorizontalAlignment="Left" Name="grid4" VerticalAlignment="Top" Width="489">
+                <DataGrid ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="490" SelectionChanged="DataGrid_SelectionChanged" Margin="0" Height="Auto" SelectionMode="Single" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="dataGrid1" MaxWidth="489"></DataGrid>
+            </Grid>
         </Grid>
-        <ScrollViewer Height="537" HorizontalAlignment="Left" Margin="0,46,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="993">
+        <ScrollViewer Height="537" HorizontalAlignment="Left" Margin="0,46,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="993" Grid.ColumnSpan="2">
             <Grid Height="Auto" Name="grid1" Width="977" Background="#FFE7DBDB">
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -25,7 +31,7 @@
                 <Label Content="Ward No :" Height="28" HorizontalAlignment="Left" Margin="381,11,0,0" Name="label3" VerticalAlignment="Top" />
                 <Label Content="BHT No :" Height="28" HorizontalAlignment="Left" Margin="656,11,0,0" Name="label4" VerticalAlignment="Top" />
                 <Label Content="Patient Name :" Height="28" HorizontalAlignment="Left" Margin="69,45,0,0" Name="label5" VerticalAlignment="Top" />
-                <TextBox Height="26" HorizontalAlignment="Left" Margin="234,47,0,0" Name="textPatientName" VerticalAlignment="Top" Width="632" />
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="234,47,0,0" Name="textPatientName" VerticalAlignment="Top" Width="632"  TextChanged="titleCaseNeeded_TextChanged" />
                 <ComboBox Height="26" HorizontalAlignment="Left" Margin="159,47,0,0" Name="comboBoxTitle" VerticalAlignment="Top" Width="68" SelectionChanged="comboBoxTitle_SelectionChanged">
                     <ComboBoxItem Content="Mr." />
                     <ComboBoxItem Content="Mrs." />
@@ -46,7 +52,7 @@
                 </ComboBox>
                 <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="161,146,0,0" Name="buttonAddSpecimen" VerticalAlignment="Top" Width="75" Click="buttonAddSpecimen_Click" />
                 <Button Content="Remove" Height="23" HorizontalAlignment="Left" Margin="518,116,0,0" Name="buttonRemoveSpecimen" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="buttonRemoveSpecimen_Click" />
-                <Grid HorizontalAlignment="Left" Margin="0,172,0,2" Name="grid2" Width="978" Background="#FFE7DBDB">
+                <Grid HorizontalAlignment="Left" Margin="0,172,0,2" Name="grid2" Width="978" Background="#FFE7DBDB" Panel.ZIndex="0">
                     <ScrollViewer Height="62" HorizontalAlignment="Left" Margin="161,6,0,0" Name="scrollViewer2" VerticalAlignment="Top" Width="705" Panel.ZIndex="1">
                         <TextBox Height="Auto" Name="textClinicalDetails" Width="689" HorizontalAlignment="Left" VerticalAlignment="Top" MinHeight="63" AcceptsReturn="True" TextWrapping="Wrap" />
                     </ScrollViewer>
@@ -81,17 +87,17 @@
                 </StackPanel>
             </Grid>
         </ScrollViewer>
-        <Label Content="HISTOPATHOLOGY REPORT" Height="35" HorizontalAlignment="Stretch" Margin="0,13,0,0" Name="label1" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Center" FontSize="20" FontStyle="Normal" FontWeight="Bold" VerticalContentAlignment="Center" Background="#FFE1C4C4" />
+        <Label Content="HISTOPATHOLOGY REPORT" Height="35" HorizontalAlignment="Stretch" Margin="0,13,0,0" Name="label1" VerticalAlignment="Top" Width="Auto" HorizontalContentAlignment="Center" FontSize="20" FontStyle="Normal" FontWeight="Bold" VerticalContentAlignment="Center" Background="#FFE1C4C4" Grid.ColumnSpan="2" />
         <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="161,590,0,0" Name="buttonSave" VerticalAlignment="Top" Width="75" Click="buttonSave_Click" />
         <Button Content="Print" Height="23" HorizontalAlignment="Left" Margin="281,590,0,0" Name="buttonPrint" VerticalAlignment="Top" Width="75" Click="buttonPrint_Click" />
         <Button Content="Clear" Height="23" HorizontalAlignment="Left" Margin="401,590,0,0" Name="buttonClear" VerticalAlignment="Top" Width="75" Click="buttonClear_Click" />
-        <Menu IsMainMenu="True" Margin="0,0,0,602" FontSize="8">
+        <Menu IsMainMenu="True" Margin="0,0,0,602" FontSize="8" Name="menu" Grid.ColumnSpan="2">
             <MenuItem Header="Menu" FontSize="12" Padding="2,0,0,1" VerticalAlignment="Top">
-                <MenuItem Header="Get Previous Reports" Click="getPreviousReports_Click"/>
+                <MenuItem Header="Get Previous Reports" Click="getPreviousReports_Click" Name="menuItemGetReport"/>
                 <MenuItem Header="Exit" Click="exitMenuItem_Click" />
             </MenuItem>
         </Menu>
-        <Label Height="28" HorizontalAlignment="Left" Margin="590,586,0,0" Name="labelError" VerticalAlignment="Top" Width="388" Visibility="Hidden" FontSize="14" Foreground="Red" VerticalContentAlignment="Center" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="590,586,0,0" Name="labelError" VerticalAlignment="Top" Width="388" Visibility="Hidden" FontSize="14" Foreground="Red" VerticalContentAlignment="Center" Grid.ColumnSpan="2" />
     </Grid>
     
 </Window>
