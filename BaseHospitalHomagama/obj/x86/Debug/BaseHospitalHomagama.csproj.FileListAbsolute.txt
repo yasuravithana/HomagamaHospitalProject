@@ -29,3 +29,71 @@ H:\Users\Yasura\Documents\Visual Studio 2010\Projects\BaseHospitalHomagama\BaseH
 H:\Users\Yasura\Documents\Visual Studio 2010\Projects\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
 H:\Users\Yasura\Documents\Visual Studio 2010\Projects\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\WPFToolkit.pdb
 H:\Users\Yasura\Documents\Visual Studio 2010\Projects\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.exe
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.pdb
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\BaseHospitalHomagama.exe
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\BaseHospitalHomagama.pdb
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\WPFToolkit.pdb
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama_MarkupCompile.cache
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.g.resources
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\GenerateResource.write.1.tlog
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.csproj.ResolveComReference.cache
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.exe
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.pdb
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\BaseHospitalHomagama.exe
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\BaseHospitalHomagama.pdb
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\WPFToolkit.dll
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\WPFToolkit.pdb
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\MainWindow.baml
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\MainWindow.g.cs
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\App.g.cs
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama_MarkupCompile.cache
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.g.resources
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.Properties.Resources.resources
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\GenerateResource.read.1.tlog
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\GenerateResource.write.1.tlog
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\ResolveAssemblyReference.cache
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.exe
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.pdb
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\BaseHospitalHomagama.exe
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\BaseHospitalHomagama.pdb
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\bin\Debug\WPFToolkit.pdb
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.csproj.ResolveComReference.cache
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\MainWindow.baml
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\MainWindow.g.cs
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\App.g.cs
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama_MarkupCompile.cache
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.g.resources
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.Properties.Resources.resources
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\GenerateResource.read.1.tlog
+J:\My Soft\homagama hospital proj\BaseHospitalHomagama\BaseHospitalHomagama\obj\x86\Debug\GenerateResource.write.1.tlog
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.csproj.ResolveComReference.cache
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.exe
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.pdb
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\bin\Debug\BaseHospitalHomagama.exe
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\bin\Debug\BaseHospitalHomagama.pdb
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\bin\Debug\WPFToolkit.dll
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\bin\Debug\WPFToolkit.pdb
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\MainWindow.baml
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\MainWindow.g.cs
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\App.g.cs
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama_MarkupCompile.cache
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.g.resources
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\BaseHospitalHomagama.Properties.Resources.resources
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\GenerateResource.read.1.tlog
+H:\Users\Yasura\Desktop\BaseHospitalHomagama\working\BaseHospitalHomagama\obj\x86\Debug\GenerateResource.write.1.tlog
