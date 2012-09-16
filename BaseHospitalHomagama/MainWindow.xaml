@@ -1,7 +1,7 @@
 ﻿<Window x:Class="BaseHospitalHomagama.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="648" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit" Loaded="Window_Loaded">
+        Title="MainWindow" Height="648" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid Background="#FFE1C4C4">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="969*" />
@@ -13,10 +13,29 @@
                 <RowDefinition Height="409*" />
             </Grid.RowDefinitions>
             <ScrollViewer Height="540" HorizontalAlignment="Stretch" Margin="489,-2,0,0" Name="scrollViewer6" VerticalAlignment="Top" Grid.RowSpan="2">
-                <TextBox AcceptsReturn="True" Height="Auto" HorizontalAlignment="Stretch" MinHeight="232" Name="textPreview" TextWrapping="Wrap" VerticalAlignment="Stretch" Width="Auto" />
+                <TextBox AcceptsReturn="True" Height="364" HorizontalAlignment="Stretch" MinHeight="232" Name="textPreview" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="Auto" MaxHeight="364" />
             </ScrollViewer>
-            <Grid Grid.RowSpan="2" Height="537" HorizontalAlignment="Left" Name="grid4" VerticalAlignment="Top" Width="489">
+            <Grid Height="364" HorizontalAlignment="Left" Name="grid4" VerticalAlignment="Top" Width="489" Margin="0,45,0,0" Grid.Row="1" MaxHeight="364" Background="#2400D000">
                 <DataGrid ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="490" SelectionChanged="DataGrid_SelectionChanged" Margin="0" Height="Auto" SelectionMode="Single" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="dataGrid1" MaxWidth="489"></DataGrid>
+            </Grid>
+            <Grid Height="169" HorizontalAlignment="Left" Name="grid5" VerticalAlignment="Top" Width="978" Grid.RowSpan="2">
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="161,12,0,0" Name="searchRefNo" TabIndex="100" VerticalAlignment="Top" Width="151" TextChanged="searchRefNo_TextChanged" />
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="442,12,0,0" Name="searchWardNo" TabIndex="101" VerticalAlignment="Top" Width="151" />
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="715,12,0,0" Name="searchBht" TabIndex="102" VerticalAlignment="Top" Width="151" />
+                <Label Content="Reference No :" Height="28" HorizontalAlignment="Left" Margin="69,10,0,0" Name="label9" VerticalAlignment="Top" />
+                <Label Content="Ward No :" Height="28" HorizontalAlignment="Left" Margin="381,12,0,0" Name="label17" VerticalAlignment="Top" />
+                <Label Content="BHT No :" Height="28" HorizontalAlignment="Left" Margin="656,12,0,0" Name="label18" VerticalAlignment="Top" />
+                <Label Content="Patient Name :" Height="28" HorizontalAlignment="Left" Margin="69,46,0,0" Name="label19" VerticalAlignment="Top" />
+                <TextBox Height="26" HorizontalAlignment="Left" Margin="162,48,0,0" Name="searchName" TabIndex="104" VerticalAlignment="Top" Width="632" />
+                <Label Content="Specimen :" Height="26" HorizontalContentAlignment="Right" Name="label23" Width="105" Margin="51,86,822,57" />
+                <my:AutoCompleteBox Height="26" IsEnabledChanged="textSpecimen_IsEnabledChanged" Name="searchSpecimen" TabIndex="8000" TextChanged="textSpecimen_TextChanged" Width="337" Margin="161,83,480,60" />
+                <Button Content="Search" Height="23" HorizontalAlignment="Left" Margin="532,140,0,0" Name="buttonSearch" VerticalAlignment="Top" Width="75" Click="buttonSearch_Click" />
+                <Label Content="Severity :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="True" Margin="52,116,0,0" Name="label20" VerticalAlignment="Top" Width="105" />
+                <ComboBox Height="26" HorizontalAlignment="Left" Margin="162,116,0,0" Name="searchSeverity" TabIndex="113" VerticalAlignment="Top" Width="142">
+                    <ComboBoxItem Content="No significance" />
+                    <ComboBoxItem Content="Cancer" />
+                </ComboBox>
+                <Button Content="Clear All" Height="23" HorizontalAlignment="Left" Margin="625,140,0,0" Name="buttonClearSearch" VerticalAlignment="Top" Width="75" Click="buttonClearSearch_Click" />
             </Grid>
         </Grid>
         <ScrollViewer Height="537" HorizontalAlignment="Left" Margin="0,46,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="993" Grid.ColumnSpan="2">
@@ -78,9 +97,13 @@
                     <DatePicker Height="25" HorizontalAlignment="Left" Margin="659,315,0,0" Name="datePicker2" VerticalAlignment="Top" Width="207" SelectedDateFormat="Long" TabIndex="115" />
                     <Label Content="Request Date :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="True" Margin="69,312,0,0" Name="label15" VerticalAlignment="Top" Width="87" />
                     <Label Content="Tested on :" Height="28" HorizontalAlignment="Left" HorizontalContentAlignment="Right" IsEnabled="True" Margin="582,312,0,0" Name="label16" VerticalAlignment="Top" Width="71" />
+                    <Button Content="!" Height="20" HorizontalAlignment="Left" Margin="872,48,0,0" Name="buttonTemplate1" VerticalAlignment="Top" Width="20" Click="buttonTemplate1_Click" />
+                    <Button Content="!" Height="20" HorizontalAlignment="Left" Margin="872,116,0,0" Name="buttonTemplate2" VerticalAlignment="Top" Width="20" Click="buttonTemplate2_Click" />
+                    <Button Content="!" Height="20" HorizontalAlignment="Left" Margin="872,184,0,0" Name="buttonTemplate3" VerticalAlignment="Top" Width="20" Click="buttonTemplate3_Click" />
+                    <Button Content="!" Height="20" HorizontalAlignment="Left" Margin="872,252,0,0" Name="buttonTemplate4" VerticalAlignment="Top" Width="20" Click="buttonTemplate4_Click" />
                 </Grid>
                 <StackPanel Height="Auto" HorizontalAlignment="Left" Margin="161,114,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="337">
-                    <my:AutoCompleteBox Name="textSpecimen" Width="337" Height="26" TabIndex="8000" />
+                    <my:AutoCompleteBox Name="textSpecimen" Width="337" Height="26" TabIndex="8000" TextChanged="textSpecimen_TextChanged" IsEnabledChanged="textSpecimen_IsEnabledChanged" />
                 </StackPanel>
                 <StackPanel Height="Auto" HorizontalAlignment="Left" Margin="51,114,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="105">
                     <Label Content="Specimen :" Height="26" Name="label7" Width="105" HorizontalContentAlignment="Right" />
