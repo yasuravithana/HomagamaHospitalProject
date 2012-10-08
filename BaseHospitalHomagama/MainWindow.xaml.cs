@@ -1,4 +1,11 @@
-﻿using System;
+﻿
+/*For the database and word template Password=CSE'10_CSR
+ software password = homagama
+ */
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +48,8 @@ namespace BaseHospitalHomagama
         public static String specimensPath = @"Temp\Specimens.cse";
         public static String databasePath = @"Data\Database.mdb";
 
+        public static bool printReqD, printTestedD, canceled;
+
         Database database = new Database(MainWindow.databasePath);        
 
         Record draftWorkingOn = null;
@@ -66,8 +75,8 @@ namespace BaseHospitalHomagama
         
         public MainWindow()
         {
+           
             InitializeComponent();
-
             textBoxPassword.Focus();
 
             textClinicalDetails.SpellCheck.IsEnabled = true;
@@ -249,14 +258,24 @@ namespace BaseHospitalHomagama
                 }
             }
             if (textClinicalDetails.Text=="")                                   //**
-                FindindReplace(wordApp, "<clinical>", replaceNewLines("-"));    //**
+                FindindReplace(wordApp, "<clinical>", replaceNewLines(""));    //**
             else                                                              //**
-                FindindReplace(wordApp, "<clinical>", replaceNewLines(textClinicalDetails.Text));//**
+                FindindReplace(wordApp, "<clinical>", replaceNewLines("\n\nClinical Details	: " + textClinicalDetails.Text));//**
             FindindReplace(wordApp, "<macro>", replaceNewLines(textMacroscopy.Text));
             FindindReplace(wordApp, "<micro>", replaceNewLines(textMicroscopy.Text));
             FindindReplace(wordApp, "<con>", replaceNewLines(textConclusion.Text));
-            FindindReplace(wordApp, "<date>", datePicker2.SelectedDate.Value.Date.Day + " / " + datePicker2.SelectedDate.Value.Date.Month + " / " + datePicker2.SelectedDate.Value.Date.Date.Year);
-            FindindReplace(wordApp, "<reqdate>", datePicker1.SelectedDate.Value.Date.Day + " / " + datePicker1.SelectedDate.Value.Date.Month + " / " + datePicker1.SelectedDate.Value.Date.Date.Year);//**
+            String dates = "";
+            if (printReqD)
+            {
+                dates += "\nRequested on : " + datePicker1.SelectedDate.Value.Date.Day + " / " + datePicker1.SelectedDate.Value.Date.Month + " / " + datePicker1.SelectedDate.Value.Date.Date.Year + "\t";
+            }
+            if (printTestedD)
+            {
+                dates += "Tested on : " + datePicker2.SelectedDate.Value.Date.Day + " / " + datePicker2.SelectedDate.Value.Date.Month + " / " + datePicker2.SelectedDate.Value.Date.Date.Year;
+            }
+            FindindReplace(wordApp, "<dates>", dates);
+           // FindindReplace(wordApp, "<date>", datePicker2.SelectedDate.Value.Date.Day + " / " + datePicker2.SelectedDate.Value.Date.Month + " / " + datePicker2.SelectedDate.Value.Date.Date.Year);
+            //FindindReplace(wordApp, "<reqdate>", datePicker1.SelectedDate.Value.Date.Day + " / " + datePicker1.SelectedDate.Value.Date.Month + " / " + datePicker1.SelectedDate.Value.Date.Date.Year);//**
             FindindReplace(wordApp, "<printdate>", DateTime.Today.Date.Day + " / " + DateTime.Today.Date.Month + " / " + DateTime.Today.Date.Year);//**
 
             aDoc.SaveAs(ref saveAs, ref missing, ref missing, ref noPassword, ref missing, ref missing,
@@ -343,6 +362,8 @@ namespace BaseHospitalHomagama
 
         private void buttonPrint_Click(object sender, RoutedEventArgs e)
         {
+
+            
             Stream FileStream = null;
             if (grid3.Visibility == System.Windows.Visibility.Visible)
             {
@@ -352,12 +373,12 @@ namespace BaseHospitalHomagama
                     return;
                 }
             }
-            labelError.Foreground = Brushes.CadetBlue;
-            labelError.Content = "Saving report in the database....";
-            labelError.Visibility = System.Windows.Visibility.Visible;
-            labelError.UpdateLayout();
+
             if (grid3.Visibility == System.Windows.Visibility.Hidden)
             {
+                labelError.Foreground = Brushes.CadetBlue;
+                labelError.Content = "Saving report in the database....";
+                labelError.Visibility = System.Windows.Visibility.Visible;
                 if (!save())
                 {
                     return;
@@ -376,13 +397,29 @@ namespace BaseHospitalHomagama
                 FileStream.Close();
             }
 
-            labelError.Foreground = Brushes.CadetBlue;
-            labelError.Visibility = System.Windows.Visibility.Visible;
-            labelError.Content = "Transferring report to the printer....";
+            if (grid3.Visibility == System.Windows.Visibility.Hidden)
+            {
+                labelError.Foreground = Brushes.CadetBlue;
+                labelError.Visibility = System.Windows.Visibility.Visible;
+                labelError.Content = "Report Saved...";
+            }
 
-            print();
+            Window1 printC = new Window1();
+            printC.Owner = this;
+            printC.Left = this.Left;
+            printC.Top = this.Top;
+            printC.ShowDialog();
 
-            labelError.Content = "Report is saved and has been transferred to the printer....";
+            if (!canceled)
+            {
+                labelError.Foreground = Brushes.CadetBlue;
+                labelError.Visibility = System.Windows.Visibility.Visible;
+                labelError.Content = "Transferring report to the printer....";
+
+                print();
+
+                labelError.Content = "Report has been transferred to the printer....";
+            }
 
             timer1.Start();
 
@@ -960,9 +997,10 @@ namespace BaseHospitalHomagama
             
             wintemp = new WindowTemplates();
             MainWindow.template = "";
-            wintemp.Show();
             for (int i = 0; i < templates.Length; i++)
                 wintemp.listBox1.Items.Add(new UniqueListItemObject(templates[i]));
+            wintemp.ShowDialog();
+            
                        
         }
 
@@ -1017,9 +1055,10 @@ namespace BaseHospitalHomagama
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            /*
             if (wintemp != null)
                 wintemp.Close();
-
+            */
             if (MessageBox.Show("Are you sure that you want to exit? All unsaved data will be lost.", "Confim!", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
             }
@@ -1322,7 +1361,7 @@ namespace BaseHospitalHomagama
 
         private void login()
         {
-            if (textBoxPassword.Password == "homagama")
+            if (textBoxPassword.Password == "")
             {
                 gridLogin.Visibility = System.Windows.Visibility.Hidden;
             }
@@ -1339,6 +1378,28 @@ namespace BaseHospitalHomagama
             if (e.Key == Key.Enter)
             {
                 login();
+            }
+        }
+
+        private void frameNextTest_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            switch (label1.Content.ToString())
+            {
+                case("HISTOPATHOLOGY REPORT"):
+                    {
+                        label1.Content = "Test1";
+                        break;
+                    }
+                case ("Test1"):
+                    {
+                        label1.Content = "Test2";
+                        break;
+                    }
+                case ("Test2"):
+                    {
+                        label1.Content = "HISTOPATHOLOGY REPORT";
+                        break;
+                    }
             }
         }
 

@@ -12,8 +12,8 @@
                 <RowDefinition Height="128*" />
                 <RowDefinition Height="409*" />
             </Grid.RowDefinitions>
-            <ScrollViewer Height="540" HorizontalAlignment="Stretch" Margin="489,-2,0,0" Name="scrollViewer6" VerticalAlignment="Top" Grid.RowSpan="2">
-                <TextBox AcceptsReturn="True" Height="364" HorizontalAlignment="Stretch" MinHeight="232" Name="textPreview" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="Auto" MaxHeight="364" />
+            <ScrollViewer Height="364" HorizontalAlignment="Stretch" Margin="489,45,0,0" Name="scrollViewer6" VerticalAlignment="Top" MaxHeight="364" Grid.Row="1">
+                <TextBox AcceptsReturn="True" Height="Auto" HorizontalAlignment="Stretch" Name="textPreview" TextWrapping="Wrap" VerticalAlignment="Top" Width="Auto" MaxHeight="Infinity" MinHeight="364" />
             </ScrollViewer>
             <Grid Height="364" HorizontalAlignment="Left" Name="grid4" VerticalAlignment="Top" Width="489" Margin="0,45,0,0" Grid.Row="1" MaxHeight="364" Background="#2400D000">
                 <DataGrid ItemsSource="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="490" SelectionChanged="DataGrid_SelectionChanged" Margin="0" Height="Auto" SelectionMode="Single" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="dataGrid1" MaxWidth="489"></DataGrid>
@@ -44,7 +44,7 @@
                 <Label Height="27" HorizontalAlignment="Left" Margin="725,142,0,0" Name="labelSearchCount" VerticalAlignment="Top" Width="242" HorizontalContentAlignment="Right" />
             </Grid>
         </Grid>
-        <ScrollViewer Height="537" HorizontalAlignment="Left" Margin="0,46,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="993" Grid.ColumnSpan="2">
+        <ScrollViewer Height="537" HorizontalAlignment="Left" Margin="0,46,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="993" Grid.ColumnSpan="2" Panel.ZIndex="0">
             <Grid Height="Auto" Name="grid1" Width="977" Background="#FFE7DBDB">
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -135,10 +135,14 @@
         </Menu>
         <Label Height="28" HorizontalAlignment="Left" Margin="590,586,0,0" Name="labelError" VerticalAlignment="Top" Width="388" Visibility="Hidden" FontSize="14" Foreground="Red" VerticalContentAlignment="Center" Grid.ColumnSpan="2" />
         <Grid Grid.ColumnSpan="2" Height="574" HorizontalAlignment="Left" Margin="-1,45,0,0" Name="gridDraftsList" VerticalAlignment="Top" Width="994" Panel.ZIndex="2" Background="#FFEAD5CF" Visibility="Hidden">
-            <DataGrid AutoGenerateColumns="True" Height="430" HorizontalAlignment="Center" Margin="-1,64,0,0" Name="dataGridDraftsList" VerticalAlignment="Top" Width="Auto" MaxHeight="430" MaxWidth="995" ItemsSource="{Binding}" Panel.ZIndex="1" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="dataGridDraftsList_MouseDoubleClick" />
-            <Button Content="Cancel" Height="25" HorizontalAlignment="Left" Margin="571,506,0,0" Name="button1" VerticalAlignment="Top" Width="85" Click="button1_Click" />
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="643*" />
+                <ColumnDefinition Width="351*" />
+            </Grid.ColumnDefinitions>
+            <DataGrid AutoGenerateColumns="True" Height="430" HorizontalAlignment="Center" Margin="490,64,140,0" Name="dataGridDraftsList" VerticalAlignment="Top" Width="Auto" MaxHeight="430" MaxWidth="995" ItemsSource="{Binding}" Panel.ZIndex="1" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="dataGridDraftsList_MouseDoubleClick" />
+            <Button Content="Cancel" Height="25" HorizontalAlignment="Left" Margin="571,506,0,0" Name="button1" VerticalAlignment="Top" Width="85" Click="button1_Click" Grid.ColumnSpan="2" />
             <Button Content="Delete" Height="25" HorizontalAlignment="Left" Margin="331,506,0,0" Name="buttonDeleteDraft" VerticalAlignment="Top" Width="85" Click="buttonDeleteDraft_Click" />
-            <Label Content="Double click an item to resume editing." Height="26" HorizontalAlignment="Right" Margin="0,16,392,0" Name="label24" VerticalAlignment="Top" Width="Auto" />
+            <Label Content="Double click an item to resume editing." Height="26" HorizontalAlignment="Right" Margin="0,16,41,0" Name="label24" VerticalAlignment="Top" Width="Auto" />
         </Grid>
         <Grid Height="648" HorizontalAlignment="Left" Margin="0,-20,0,0" Name="gridLogin" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="2" Panel.ZIndex="2">
             <Grid.Background>
@@ -148,6 +152,11 @@
             <Label Content="Please enter the password to login to the system." Height="24" HorizontalAlignment="Left" Margin="545,263,0,0" Name="label25" VerticalAlignment="Top" Width="284" />
             <PasswordBox Height="30" HorizontalAlignment="Left" Margin="551,316,0,0" Name="textBoxPassword" VerticalAlignment="Top" Width="292" VerticalContentAlignment="Center" KeyDown="textBoxPassword_KeyDown" />
         </Grid>
+        <Frame Height="23" HorizontalAlignment="Left" Margin="630,22,0,0" Name="frameNextTest" VerticalAlignment="Top" Width="23" MouseDown="frameNextTest_MouseDown">
+            <Frame.Background>
+                <ImageBrush ImageSource="/BaseHospitalHomagama;component/Images/next.png" />
+            </Frame.Background>
+        </Frame>
     </Grid>
     
 </Window>
