@@ -1,7 +1,7 @@
 ﻿<Window x:Class="BaseHospitalHomagama.WindowTemplates"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="WindowTemplates" Height="600" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+        Title="WindowTemplates" Height="600" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Topmost="True">
     <Grid Background="#FFE7DBDB">
         <ListBox BorderThickness="5" 
                VerticalAlignment="Stretch" 
